@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HotShot | HotShot App | Contact Us</title>
+    <link type="text/css" rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <div id="content">
+    <header>
+        <a href="index.html" id="logo_link">
+            <div class='logo'>
+                <img src='images/HotShot.png' alt='HotShot logo'>
+            </div>
+        </a>
+        <nav>
+            <a href="faq.html">Frequently Asked Questions</a>
+            <a href="contactus.html">Contact Us</a>
+        </nav>
+    </header>
+    <section id="contactus-heading-box">
+        <h1 class="contactus-title">Our Priority Is You</h1>
+    </section>
+    <main class="contactus-grid">
+        <img class="contactus-img" src="images/contactus-app.png" alt="The App Store Application">
+        <section class="priority-msg">
+            <p>We want to help you have fun competing with others on our HotShot app. If you have issues or questions while using our app, we want to resolve them so you can get back to shooting your favorite firearms.
+            Our team consistently updates our app’s content and always looks for feedback on how we can improve HotShot. If you have feedback, questions, issues, or anything you’d like to share, please do so below!
+            </p>
+        </section>
+        <section class="contactus-form">
+            <h2>Contact Us!</h2>
+            <div id="feedback"></div>
+            <form action="/my-handling-form-page" method="post">
+                <ul>
+                  <li>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="user_name" />
+                  </li>
+                  <li>
+                    <label for="mail">E-mail:</label>
+                    <input type="email" id="mail" name="user_email" />
+                  </li>
+                  <li>
+                    <label for="msg">Message:</label>
+                    <textarea id="msg" name="user_message"></textarea>
+                  </li>
+                  <li class="button">
+                    <button type="submit">Send your message</button>
+                  </li>
+                </ul>
+              </form>
+        </section>
+        <img class="cleaning-img" src="images/contactus-cleaning.png" alt="A man cleaning a rifle">
+        <section class="msg">
+            <h2>How We Started:</h2>
+            <p>We started out like you did; simple gun owners looking to have a little competitive fun. As a family of outdoors loving people, we wanted to find a way to compete against family and friends while shooting but couldn’t find any options out there that were close to our location and were being done frequently.
+            Once we realized that through the convenience of an app you could compete with other shooters around the world and not have to worry about a schedule, our idea for HotShot was born. Since then, our app and online community has grown and helped fulfill our dream of making competitive shooting available to every gun owner.
+            </p>
+        </section>
+    </main>
+    <footer>
+        <p>HotShot &copy; 2022 - Matthew Perkins</p>
+        <p><a href="site-plan.html">Site Plan</a></p>
+        <p><a href="#">Download Now</a></p>
+        <div class="social">
+            <a href="https://facebook.com" target="_blank">
+                <img src="images/facebook.png" alt="fb icon">
+            </a>
+            <a href="https://twitter.com" target="_blank">
+                <img src="images/twitter.png" alt="twitter icon">
+            </a>
+            <a href="https://instagram.com" target="_blank">
+                <img src="images/instagram.png" alt="instagram icon">
+            </a>
+        </div>
+    </footer>
+    </div>
+    <script>
+        // get the feedback div element so we can do something with it.
+        const feedbackElement = document.getElementById('feedback');
+        // get the form so we can read what was entered in it.
+        const formElement = document.forms[0];
+        // add a 'listener' to wait for a submission of our form. When that happens run the code below.
+        formElement.addEventListener('submit', function(e) {
+            // stop the form from doing the default action.
+            e.preventDefault();
+            // set the contents of our feedback element to a message letting the user know the form was submitted successfully. Notice that we pull the name that was entered in the form to personalize the message!
+            feedbackElement.innerHTML = 'Hello '+ formElement.user_name.value +'! Thank you for your message. We will get back with you as soon as possible!';
+            // make the feedback element visible.
+            feedbackElement.style.display = "block";
+            // add a class to move everything down so our message doesn't cover it.
+            document.body.classList.toggle('moveDown');
+        });
+    </script>
+</body>
+</html>
