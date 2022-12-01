@@ -25,21 +25,23 @@ nav a {
     color:black;
     text-decoration: none;
     padding: 35px;
+    font-size: 1.5em;
 }
 nav a:hover {
-    background-color: #60A3D5;
+    background-color: #E32E29;
     color:black;
 }
 .home-title {
     color: white;
     font-family: 'Play', sans-serif;
-    font-size: 2em;
+    font-size: 5em;
     margin-top: 10px;
     text-align: center;
 }
 h4 {
     color:white;
     text-align: center;
+    font-size: 1.5em;
 }
 #hero {
     display: grid;
@@ -59,15 +61,6 @@ h4 {
 #hero-img {
     width: 100%;
 }
-.hero-msg h1, .hero-msg h4 {
-    text-align: center;
-    margin: 0;
-    color: #C5C5C3;
-}
-main section {
-    text-align: center;
-    box-sizing: border-box;
-}
 body {
     background-color: #fcfbfb;
     font-family: 'Noto Sans Wancho', sans-serif;
@@ -75,32 +68,12 @@ body {
     margin: 0;
     padding: 0;
 }
-h2 {
-    margin: 0;
-}
 header {
     background-color: #33B6E8;
+    font-family: 'Play', sans-serif;
     display: grid;
     grid-template-columns: 150px auto;
     border: 1px solid black;
-}
-.card-img {
-    border: 10px solid black;
-    transition: transform .5s;
-    box-shadow: 5px 5px 10px #6f7364;
-}
-.card-img:hover {
-    opacity: .6;
-    transform: scale(1.1);
-}
-.msg h2 {
-    color: black;
-    font-family: 'Rock Salt';
-}
-.msg p {
-    color: black;
-    font-size: .8em;
-    padding-bottom: 15px;
 }
 .home-grid {
     margin-top: 100px;
@@ -112,6 +85,7 @@ header {
 }
 .introduction-card {
     grid-area: 1 / 1 / 2 / 5;
+    text-align: left;
     white-space: pre-line;
     height: fit-content;
     background-color: #C5C5C3;
@@ -121,8 +95,12 @@ header {
     border: 1px solid black;
     border-radius: 5px;
 }
+.introduction-card h2 {
+    font-family: 'Play', sans-serif;
+}
 .needs-card {
     grid-area: 2 / 1 / 4 / 3;
+    text-align: left;
     white-space: pre-line;
     height: fit-content;
     background-color: #C5C5C3;
@@ -131,6 +109,9 @@ header {
     box-shadow: 5px 5px 10px #6f7364;
     border: 1px solid black;
     border-radius: 5px;
+}
+.needs-card h2 {
+    font-family: 'Play', sans-serif;
 }
 .home-img {
     grid-area: 2 / 3 / 4 / 5;
@@ -140,6 +121,7 @@ header {
 }
 .how-card {
     grid-area: 4 / 1 / 5 / 5;
+    text-align: left;
     white-space: pre-line;
     height: fit-content;
     background-color: #C5C5C3;
@@ -150,8 +132,12 @@ header {
     border-radius: 5px;
     margin-bottom: 50px;
 }
+.how-card h2 {
+    font-family: 'Play', sans-serif;
+}
 footer {
     background-color: #33B6E8;
+    font-family: 'Play', sans-serif;
     color:black;
     padding: 25px 50px;
     margin-top: 100px;
@@ -174,6 +160,89 @@ footer a {
 }
 footer a:hover {
     color: #60A3D5;
+}
+
+/* ---------FREQUENTLY ASKED QUESTIONS PAGE--------- */
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 50px;
+    grid-row-gap: 50px;
+    align-items: center;
+    }
+    
+#faq-heading-box {
+    margin: 100px;
+    color: black;
+    background-color: #C5C5C3;
+    font-family: 'Play', sans-serif;
+    font-size: 2em;
+    margin-top: 100px;
+    text-align: center;
+    padding: 0;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.targets-faq {
+    grid-area: 1 / 1 / 3 / 3;
+    text-align: left;
+    white-space: pre-line;
+    height: fit-content;
+    background-color: #C5C5C3;
+    line-height: 1.5em;
+    padding: 35px;
+    box-shadow: 5px 5px 10px #6f7364;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.targets-faq h2 {
+    font-family: 'Play', sans-serif;
+}
+.included-faq {
+    grid-area: 3 / 1 / 5 / 3;
+    text-align: left;
+    white-space: pre-line;
+    height: fit-content;
+    background-color: #C5C5C3;
+    line-height: 1.5em;
+    padding: 35px;
+    box-shadow: 5px 5px 10px #6f7364;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.included-faq h2 {
+    font-family: 'Play', sans-serif;
+}
+.sharing-faq {
+    grid-area: 5 / 1 / 7 / 3;
+    text-align: left;
+    white-space: pre-line;
+    height: fit-content;
+    background-color: #C5C5C3;
+    line-height: 1.5em;
+    padding: 35px;
+    box-shadow: 5px 5px 10px #6f7364;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.sharing-faq h2 {
+    font-family: 'Play', sans-serif;
+}
+.faq-img1 {
+    grid-area: 1 / 3 / 4 / 6;
+    width: 100%;
+    height: 100%;
+    box-shadow: 5px 5px 10px #6f7364;
+    border: 1px solid black;
+}
+.faq-img2 {
+    grid-area: 4 / 3 / 7 / 6;
+    width: 100%;
+    height: 100%;
+    box-shadow: 5px 5px 10px #6f7364;
+    border: 1px solid black;
 }
 
 @media screen and (max-width: 900px) {
